@@ -122,12 +122,12 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 mytextclock = awful.widget.textclock()
 
 -- Battery Widget
-batteryWidget = wibox.widget.textbox()
-batteryWidget_timer  = timer({timeout = 1})
-batteryWidget_timer:connect_signal("timeout", function()
-  batteryWidget:set_text(batteryInfo("BAT0"))
+batterywidget = wibox.widget.textbox()
+batterywidget_timer  = timer({timeout = 1})
+batterywidget_timer:connect_signal("timeout", function()
+  batterywidget:set_text(batteryInfo("BAT0"))
 end)
-batteryWidget_timer:start()
+batterywidget_timer:start()
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -207,7 +207,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
-    right_layout:add(batteryWidget)
+    right_layout:add(batterywidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
