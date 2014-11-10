@@ -125,7 +125,7 @@ mytextclock = awful.widget.textclock()
 batterywidget = wibox.widget.textbox()
 batterywidget_timer  = timer({timeout = 1})
 batterywidget_timer:connect_signal("timeout", function()
-  batterywidget:set_text(batteryInfo("BAT0"))
+  batterywidget:set_text(batteryInfo("BAT1"))
 end)
 batterywidget_timer:start()
 -- Create a wibox for each screen and add it
