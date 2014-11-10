@@ -10,7 +10,8 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
-local vicious = require("battery")
+local vicious = require("vicious")
+local battery = require("battery")
 
 -- Load Debian menu entries
 require("debian.menu")
