@@ -40,6 +40,9 @@ do
 end
 -- }}}
 
+-- Init nm-appet
+os.execute("nm-applet &")
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
