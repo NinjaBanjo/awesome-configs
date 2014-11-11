@@ -38,6 +38,10 @@ function batteryInfo(adapter)
                , bg       = beautiful.bg_focus
         })
       end
+    elseif sta:match("Full") then
+      icon = ""
+      battery = ""
+      percent = "Battery Full"
     end
   end
   return " "..icon..battery..percent.." "
