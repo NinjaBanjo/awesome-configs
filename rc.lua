@@ -291,7 +291,11 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
+    awful.key({ modkey }, "p", function() menubar.show() end),
+    -- Media Keys
+    awful.key({ }, "XF86AudioPlay", function () awful.util.spawn_with_shell("bash ~/code/scripts/media-playpause") end),
+    --awful.key({ }, "XF86AudioPrev", function () awful.util.spawn_with_shell("bash ~/code/scripts/media-previous") end),
+    awful.key({ }, "XF86AudioNext", function () awful.util.spawn_with_shell("bash ~/code/scripts/media-next") end)
 )
 
 clientkeys = awful.util.table.join(
