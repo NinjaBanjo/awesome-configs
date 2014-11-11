@@ -296,7 +296,7 @@ globalkeys = awful.util.table.join(
     -- Volume Controls
     awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 5%-") end),
     awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 5%+") end),
-    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute 0 toggle && pactl set-sink-mute 1 toggle") end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn_with_shell("pactl set-sink-mute 0 toggle && pactl set-sink-mute 1 toggle") end),
     -- Media Keys
     awful.key({ }, "XF86AudioPlay", function () awful.util.spawn_with_shell("bash ~/code/scripts/media-playpause") end),
     --awful.key({ }, "XF86AudioPrev", function () awful.util.spawn_with_shell("bash ~/code/scripts/media-previous") end),
