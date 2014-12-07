@@ -126,7 +126,7 @@ mytextclock = awful.widget.textclock()
 
 -- CPU Widget
 cpuwidget = wibox.widget.textbox()
-vicious.register(cpuwidget, vicious.widgets.cpu, "|CPU:$1%|")
+vicious.register(cpuwidget, vicious.widgets.cpu, "$1%")
 
 -- Memory Usage
 memwidget = awful.widget.progressbar()
